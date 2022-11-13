@@ -1,40 +1,416 @@
-@import "../scss/variables/general.scss";
-@import "../scss/mixins/general.scss";
+@import "./scss/variables/general.scss";
+@import "./scss/mixins/general.scss";
+@font-face {
+    font-family: "SenBold";
+    src:   url("./public/fonts/Sen-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "SenRegular";
+    src: url("./public/fonts/Sen-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Inter";
+    src: url("./public/fonts/Inter-Regular.ttf") format("truetype"); 
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 body {
     margin: 0;
     padding: 0;
 }
-// nested scss
-.header {
+// reset css
+*{
+    padding: 0; margin:0;
+    box-sizing: border-box; 
+    outline: none; border: none;
+    text-decoration: none;
+  
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+    
+}
+/* độ rộng */
+::-webkit-scrollbar{
+    width: .8rem;
+}
+/* cái nút kéo */
+::-webkit-scrollbar-thumb{
+   background: linear-gradient(transparent,#30ff00);
+   border-radius: 5rem;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(transparent,#00c6ff);
+}
+/* cái thanh dài */
+::-webkit-scrollbar-track{
+    width: .8rem;
+}
+.header{
     width: 100%;
-    height: 80px;
-    padding: 0px 80px 0px 83px;
-    box-sizing: border-box;
+    @include displayFlexCenter(center,space-between,32px);
+    padding: 1.2rem 8rem 1.2rem 8.2rem;
     background-color: $darkBg;
-    // display: flex;
-    // align-items: center;
-    // justify-content: space-between;
-    @include displayFlexCenter(center, space-between);
-    gap: 32px;
-
-    &__logo {
+    &__logo{
         font-size: 24px;
-        font-weight: 700;
+        font-weight: 700px;
         color: $white;
     }
-    &__links {
+    &__subcribe{
+        padding: 16px 48px;
+        @include fonts(SenBold,1.8rem,700,2.4rem);
+        color: $darkBg;
+        background-color: $white;
+        cursor: pointer;
+    }
+    &__subcribe:hover{
+        opacity: 0.7;
+    }
+    &__links{
+     flex-grow: 1;
+     display: flex;
+     @include displayFlexCenter(center,flex-end,3.2rem)
+
+    }
+    &__links a{
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.8rem;
+        color: $white;
+    }
+        &__links a:hover{
+            opacity: 0.7;
+        }
+
+}
+.post-featured{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8rem;
+
+    @include displayFlexCenter(flex-start,space-between);
+    gap: 14.1rem;
+
+    background-color: $lavendar;
+}
+.post-featured__content{
+    &--top{
+       @include fonts(Inter,1.6rem,500,2rem);
+        letter-spacing: .3rem;
+      
+    }
+    &--title{
+        margin-top: 2rem;
+        @include fonts(SenBold,3.6rem,700,4.8rem);
+        letter-spacing: -.2rem;
+    }
+    &--name{
+        margin-top: 1.6rem;
+        @include fonts(Inter,1.4rem,500,2rem);
+    }
+    &--name span{
+        color: $purple;
+    }
+    &--discribe{
+        margin-top: 1.6rem;
+        @include fonts(Inter,1.6rem,400,2.8rem);
+        color: $mediumGray;
+    }
+    &--btn{
+        margin-top: 3.2rem;
+        @include button($yellowBg);
+        cursor: pointer;
+    }
+    &--btn:hover{
+        opacity: 0.8;
+    }
+
+}
+.container{
+    padding: 6.4rem 7.8rem 0 8rem;
+}
+.all-post{
+    box-sizing: border-box;
+    // padding: 6.4rem 7.8rem 0 8rem;
+    &__title{
+        @include fonts(SenBold,4.8rem,700,6.4rem);
+        letter-spacing: -.2rem;
+    }
+    & .cross-bar{
+        margin-top:3.2rem;
+        height: 1px;
+        width: 100%;
+        background-color: $mediumGray;
+    }
+    & .card-post{
+        margin-top: 6.4rem;
+        margin-bottom: 6.4rem;
+        margin-right: 13.6rem;
+        @include displayFlexCenter(center,space-between,3.2rem)
+    }
+    & .next-prev{
+        height: 4rem;
+        margin-bottom: 6.4rem;
+        @include displayFlexCenter(center,center,0);
+       
+    }
+}
+ .all-post .next-prev{
+    & .btn-prev{
+        margin-right: 1.7rem;
+        @include fonts(SenBold,2.4rem,700,3.2rem);
+        color: $mediumGray;
+         background-color: $white;
+         
+    }
+     & .btn-next{
+        @include fonts(SenBold,2.4rem,700,3.2rem);
+         color: $mediumGray;
+         background-color: $white;
+    }
+     & .btn-prev:hover,
+     .btn-next:hover{
+        box-sizing: border-box;
+        @include fonts(SenBold,2.8rem,700,4rem);
+        color: $darkBg;
+        letter-spacing: -.1rem;
+    }
+ }
+
+.card-post .card-content{
+    &__top{
+       @include fonts(Inter,1.6rem,600,2rem);
+       letter-spacing: .3rem;
+       color: $purple;
+    }
+    &__title{
+        margin-top: 2rem;
+        @include fonts(SenBold,3.6rem,700, 4.8rem);
+        color: $darkBg;
+        letter-spacing: -.2rem;
+    }
+    &__discribe{
+        margin-top: 1.6em;
+        @include fonts(Inter,1.6rem,400,2.8rem);
+        color: $mediumGray;
+    }
+}
+//  categories
+.all-categories{
+    margin-bottom: 12.8rem;
+    & .title{
+        margin-bottom: 4.8rem;
+        @include fonts(SenBold,3.5rem,700,4.8rem);
+        letter-spacing: -.2rem;
+        color: $darkBg;
+    }
+    & .card{
+        @include displayFlexCenter(center,space-between,0);
+    }
+}
+.card-categories{
+    width: 26.5rem;
+    box-sizing: border-box;
+    padding: 3.2rem;
+    border: 1px solid $mediumGray;
+    
+    &__icon{
+        height: 48px;
+        width: 48px;
+        @include displayFlexCenter(center,center,0);
+        border-radius: 5px;
+       
+        background-color: $lightYellow;
+    }
+    &__title{
+        margin-top: 1.6rem;
+        margin-bottom: 0.4rem;
+        @include fonts(SenBold,2.8rem,700,4rem);
+        letter-spacing: -.1rem;
+        color: $darkBg;
+    }
+    &__discribe{
+        @include fonts(Inter,1.6rem,400,2.8rem);
+        color: $mediumGray;
+    }
+}
+.card-categories:hover{
+    border: none;
+    background-color: $yellowBg;
+}
+// join
+.join{
+    margin-bottom: 12.8rem;
+    width: 100%;
+    @include displayFlexCenter(center,center,0);
+  &__box{
+    width: 41.4rem;
+    text-align: center
+  }
+   &__title{
+    @include fonts(SenBold,3.6rem,700,4.8rem);
+    letter-spacing: -.2rem;
+    color: $darkBg;
+   }
+   &__discribe{
+    margin-top: 1.6rem;
+    @include fonts(Inter,1.6rem,400,2.8rem);
+    color: $mediumGray;
+   }
+   &__btn--yellow{
+    margin-top: 3.2rem;
+    @include button($yellowBg);
+   }
+    &__btn--yellow:hover{
+        opacity: 0.8;
+    }
+}
+// footer
+.footer{
+    padding: 6.1rem 8rem 5.6rem;
+    background-color: $darkBg;
+    
+    & .logo-links{
+        @include displayFlexCenter(center,space-between,0);
+
+    }
+    .footer__links{
         flex-grow: 1;
-        // display: flex;
-        // justify-content: flex-end;
-        // gap: 24px;
-        @include displayFlexCenter(center, flex-end, 24px);
-        * {
-            color: $white;
-            text-decoration: none;
+        display: flex;
+        justify-content: flex-end;
+        gap: 2.4rem;
+    }
+     .footer__links a{
+        @include fonts(Inter,1.6rem,400,2.8rem);
+        color: $white;
+     }
+      .footer__links a:hover{
+        opacity: 0.8;
+      }
+     .footer__subcribe{
+        margin-top: 5.4rem;
+        width: 100%;
+        background-color: rgba(255,255,255,0.05);
+        
+     }
+}
+.footer__subcribe{
+    padding: 8rem 6.4rem;
+    @include displayFlexCenter(flex-start,space-between,6.4rem);
+    &--title{
+        max-width: 56.2rem;
+        @include fonts(SenBold,3.6rem,700,4.8rem);
+        color: $white;
+        letter-spacing: -.2rem;
+     
+    }
+    &--input{
+        box-sizing: border-box;
+        border: .1rem solid $darkGray;
+        height: 5.6rem;
+        width: 32.3rem;
+    
+        padding-left: 2.5rem;
+        color: $darkGray;
+    }
+
+    &--btn{
+        @include button($yellowBg);
+    }
+      &--btn:hover{
+        opacity: 0.8;
+      }
+    &--inputSub{
+        flex-grow: 1;
+        @include displayFlexCenter(flex-start, flex-end,2.4rem);
+    }
+}
+.footer__hotline{
+    margin-top: 4.8rem;
+    @include displayFlexCenter(flex-start,space-between,0);
+    .icons{
+       list-style: none;
+       flex-grow: 1;
+       @include displayFlexCenter(flex-start,flex-end,2.68rem);
+       
+    }
+   
+}
+.footer__hotline--contact p{
+    @include fonts(Inter,1.6rem,400,2.8rem);
+    color: $white;
+}
+@media (max-width: 1000px){
+   html{
+    font-size: 50%;
+   }
+   .header{
+    padding: 1.2rem 5%;
+   }
+   
+}
+@media (max-width: 800px) {
+    .header{
+        &__subcribe{
+            display: none;
         }
     }
-    &__subcribe {
-        @include button();
+    .footer__links{
+        position: absolute;
+       z-index: -10000;
     }
+}
+@media (max-width: 1224px){
+    .post-featured{
+        display: flex;
+        flex-flow:column-reverse;
+        align-items: center;
+    }
+    .all-post{
+        .card-post{
+            width: 490px;
+            display: flex;
+            flex-flow: column;
+        }
+    }
+    .all-categories{
+        & .title{
+            @include displayFlexCenter();
+        }
+        & .card{
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+        }
+        & .card .card-categories{
+            width: 45rem;
+            margin-bottom: 1rem;
+        }
+    }
+    .footer__subcribe{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    &--inputSub{
+        width: 100%;
+        flex-flow: column;
+    }
+    &--title{
+        text-align: center;
+    }
+    &--input,
+    &--btn{
+        width: 100%;
+    }
+   }
 }
