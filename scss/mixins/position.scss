@@ -1,0 +1,15 @@
+@mixin position(
+    $position: absolute,
+    $top: auto,
+    $right: auto,
+    $bottom: auto,
+    $left: auto,
+    $zIndex: 1
+) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    z-index: $zIndex;
+}

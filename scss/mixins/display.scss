@@ -1,0 +1,11 @@
+@mixin displayFlexCenter($align: center, $justi: center, $gap: 0) {
+    display: flex;
+    justify-content: $justi;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin displayFlexCol($align: center, $justi: center, $gap: 0) {
+    @include displayFlexCenter($align, $justi, $gap);
+    flex-direction: column;
+}

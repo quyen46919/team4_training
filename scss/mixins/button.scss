@@ -1,0 +1,30 @@
+@mixin button($color: $white) {
+    padding: 1.6rem 4.8rem;
+    background-color: $color;
+    border: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    cursor: pointer;
+    transition: 0.3s;
+
+    @if $color == $white {
+        &:hover {
+            background-color: darken($white, 10);
+        }
+
+        &:active {
+            background-color: $white;
+        }
+    }
+
+    @if $color == $yellow {
+        &:hover {
+            background-color: $darkYellow;
+        }
+
+        &:active {
+            background-color: $yellow;
+        }
+    }
+}

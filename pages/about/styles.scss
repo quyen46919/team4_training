@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&family=Sen:wght@700&display=swap");
+
+@import "../../scss/mixins/typo.scss";
+@import "../../scss/mixins/button.scss";
+@import "../../scss/mixins/display.scss";
+@import "../../scss/mixins/responsive.scss";
+@import "../../scss/mixins/position.scss";
+
+@import "../../scss/variables/colors.scss";
+@import "../../scss/variables/size.scss";
+
+@import "../../scss/base/base.scss";
+
+@import "../../scss/components/container.scss";
+@import "../../scss/components/header.scss";
+@import "../../scss/components/author.scss";
+@import "../../scss/components/join.scss";
+@import "../../scss/components/footer.scss";
+
+.about {
+    // Main
+    &__main {
+        margin-top: $heightHeader;
+        padding: 8rem 0 12.8rem 0;
+
+        @include responsive($tablet) {
+            padding: 4rem 0 6.4rem 0;
+        }
+
+        @include responsive($mobile) {
+            padding: 2rem 0 4.2rem 0;
+        }
+    }
+
+    // Introduce
+    &__introduce {
+        @include displayFlexCenter(center, space-between, 3.2rem);
+
+        margin: -6.4rem 3.8rem 0 10.9rem;
+
+        @include responsive($tablet) {
+            @include displayFlexCol;
+            margin: 0 1.9rem 0 5.45rem;
+            padding-bottom: 6.4rem;
+        }
+
+        @include responsive($mobile) {
+            margin: 0 1.9rem 0 2.35rem;
+            padding-bottom: 3.2rem;
+        }
+
+        &--title {
+            @include textCap(500);
+        }
+
+        &--heading {
+            @include heading1;
+
+            padding-top: 1.6rem;
+        }
+
+        &--text {
+            @include textBody1;
+        }
+    }
+
+    &__introduce-desc {
+        @include position(relative, $bottom: -6.4rem);
+
+        padding: 6.4rem;
+        background-color: $white;
+
+        @include responsive($tablet) {
+            bottom: 0;
+            padding: 0;
+        }
+    }
+
+    // Overview
+    &__overview {
+        @include displayFlexCol(normal);
+
+        &--title {
+            @include textCap;
+        }
+
+        &--heading {
+            @include heading3;
+
+            padding: 2.4rem 16.4rem 1.6rem 0;
+
+            @include responsive($tablet) {
+                padding-right: 0;
+            }
+        }
+
+        &--text {
+            @include textBody1;
+
+            padding-right: 9.4rem;
+
+            @include responsive($tablet) {
+                padding-right: 0;
+            }
+        }
+    }
+
+    &__overview-picture {
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    $heightShape: 2.3rem;
+
+    &__overview-content {
+        @include displayFlexCenter(flex-start, space-between, 3.2rem);
+
+        padding: 12.8rem 10.8rem 9.4rem 10.8rem;
+        background-color: $lavendar;
+        position: relative;
+
+        @include responsive($tablet) {
+            @include displayFlexCol(flex-start, space-between, 6.4rem);
+            padding: 6.4rem 5.4rem 4.75rem 5.4rem;
+        }
+
+        @include responsive($mobile) {
+            padding: 3.5rem 2.7rem 2.325rem 2.7rem;
+        }
+
+        &::before {
+            @include position(absolute, -$heightShape);
+
+            content: "";
+            height: $heightShape;
+            width: 20%;
+            background-color: $purple;
+
+            @include responsive($tablet) {
+                left: 0;
+                width: 40%;
+            }
+        }
+
+        &::after {
+            @include position(absolute, -$heightShape, $zIndex: 0);
+
+            content: "";
+            height: $heightShape;
+            width: 60%;
+            background-color: $yellow;
+
+            @include responsive($tablet) {
+                right: 0;
+                width: 100%;
+            }
+        }
+    }
+
+    &__overview-total {
+        @include position(absolute, 0);
+        @include displayFlexCenter(flex-start, space-between, 6.8rem);
+
+        padding: 3.2rem 4.8rem;
+        background-color: $yellow;
+        transform: translateY(calc(-100% - $heightShape + 0.1rem));
+
+        &--heading {
+            @include headingDisplay;
+
+            @include responsive($mobile) {
+                @include heading2;
+            }
+        }
+
+        &--text {
+            @include textBody1;
+        }
+
+        @include responsive($tablet) {
+            left: 0;
+            gap: 3.2rem;
+            width: 100%;
+        }
+
+        @include responsive($mobile) {
+            padding: 0.8rem 1.6rem;
+        }
+    }
+
+    // Information
+    &__information {
+        &--heading {
+            @include heading2;
+        }
+
+        &--sub-heading {
+            @include heading4;
+
+            padding: 1.6rem 0;
+        }
+
+        &--text {
+            @include textBody1;
+        }
+    }
+
+    &__information-item {
+        @include displayFlexCenter($justi: space-between, $gap: 13.7rem);
+
+        padding-top: 12.8rem;
+
+        @include responsive($tablet) {
+            @include displayFlexCol($justi: space-between, $gap: 4.8rem);
+        }
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+
+            @include responsive($tablet) {
+                @include displayFlexCol($justi: space-between, $gap: 4.8rem);
+            }
+        }
+    }
+
+    &__information-picture {
+        width: 100%;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // Author & Join
+    &__author,
+    &__join {
+        padding-top: 12.8rem;
+    }
+}
