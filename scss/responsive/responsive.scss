@@ -1,0 +1,70 @@
+@import '../mixins/display.scss';
+// desktop small
+@media (max-width: 1439px){
+   html{
+    font-size: 50%;
+   }
+   .header{
+    padding: 1.2rem 5%;
+   }
+   .container{
+    width: auto;
+   }
+}
+   
+@media  (max-width: 1200px){
+   .blogpage__banner{
+    @include displayFlexcolumn(center,center,0,column-reverse);
+    &-content{
+        margin-top: 2rem;
+        @include displayFlexcolumn(flex-start,center,0);
+    }
+   }
+  .blogpage__allpost-card{
+    @include displayFlexcolumn(flex-start,center,0);
+    &--content{
+        margin-top: 2rem;
+        width: 490px;
+    }
+  }
+  .blogpage__categories{
+    &-card{
+        @include displayFlexcolumn();
+    }
+    &--card{
+        margin-bottom: 2rem;
+    }
+    &--title{
+        text-align: center;
+    }
+  }
+  .footer{
+    &__form{
+        @include displayFlexcolumn();
+        &--title{
+            text-align: center;
+        }
+        &--inputsub{
+            @include displayFlexcolumn();
+        }
+        &--sub{
+            margin-top: 2rem;
+            width: 100%;
+        }
+    }
+  }
+}
+// 800px
+@media (max-width: 850px){
+    .header{
+        &__links,
+        &__subcribe{
+            display: none;
+        } 
+    }
+    .footer{
+        &__links{
+            display: none;
+        }
+    }
+}

@@ -1,40 +1,164 @@
-@import "../scss/variables/general.scss";
-@import "../scss/mixins/general.scss";
-
-body {
-    margin: 0;
-    padding: 0;
-}
-// nested scss
-.header {
+@import './scss/mixins/components.scss';
+@import './scss/variables/colors.scss';
+@import './scss/mixins/display.scss';
+@import './scss/mixins/typo.scss';
+.blogpage-main{
     width: 100%;
-    height: 80px;
-    padding: 0px 80px 0px 83px;
-    box-sizing: border-box;
-    background-color: $darkBg;
-    // display: flex;
-    // align-items: center;
-    // justify-content: space-between;
-    @include displayFlexCenter(center, space-between);
-    gap: 32px;
-
-    &__logo {
-        font-size: 24px;
-        font-weight: 700;
-        color: $white;
+    padding: 0 8rem;
+}
+.blogpage__banner{
+    margin: 0 -8rem; 
+    padding: 8rem;
+    @include displayFlexCenter(flex-start,space-between,0);
+    background-color: $lavendar;
+    &-content{
+        width: 62.4rem;
     }
-    &__links {
-        flex-grow: 1;
-        // display: flex;
-        // justify-content: flex-end;
-        // gap: 24px;
-        @include displayFlexCenter(center, flex-end, 24px);
-        * {
-            color: $white;
-            text-decoration: none;
+    &--lable{
+        @include cap3();
+        color: $darkBg;
+        text-transform: uppercase;
+    }
+    &--title{
+        margin-top: 2rem;
+        @include heading2();
+        color: $darkBg;
+    }
+    &--author{
+        margin-top: 1.6rem;
+        @include lable1();
+        color: $darkGray;
+        text-transform: capitalize;
+    }
+    &--author span{
+        color: $purple;
+    }
+    &--discribe{
+        margin-top: 1.6rem;
+        @include body1();
+        color: $mediumGray;
+    }
+    &--btn{
+        margin-top: 3.2rem;
+        @include buttonRead($yellowBg);
+    }
+    
+}
+.blogpage__allpost{
+    width: 100%;
+    margin-top: 6.4rem;
+    &--title{
+        @include heading1();
+        color: $darkBg;
+    }
+    &--crossbar{
+        width: 100%; height: 1px;
+        margin-top: 3.2rem;
+        background-color: $mediumGray;
+    }
+    &-card{
+        width: 100%;
+        padding-right: 13.3rem;
+        margin: 6.4rem 0;
+        @include displayFlexCenter(center, space-between,3.2rem);
+    }
+    &-card--lable{
+        @include cap1();
+        color: $purple;
+        text-transform: uppercase;
+    }
+    &-card--title{
+        display: block;
+        margin-top: 2rem;
+        @include heading2();
+        color: $darkBg;
+    }
+    &-card--discribe{
+        margin-top: 1.6rem;
+        @include body1();
+        color: $mediumGray;
+    }
+    &--prevnext{
+        width: 100%; height: 40px;
+        margin-bottom: 6.4rem; 
+        @include displayFlexCenter(center,center,17px);
+    }
+    &--prev,
+    &--next{
+        @include heading4();
+        color: $mediumGray;
+        background-color: $white;
+        text-transform: capitalize;
+        cursor: pointer;
+    }
+    &--prev:hover,
+    &--next:hover{
+        @include heading3();
+        color: $darkBg;
+    }
+}
+.blogpage__categories{
+    width: 100%;
+    margin-bottom: 12.8rem;
+    &-card{
+        @include displayFlexCenter(center, space-between,0);
+    }
+    &--title{
+        margin-bottom: 4.8rem;
+        @include heading2();
+        color: $darkBg;
+        text-transform: capitalize;
+    }
+    &--card{
+        max-width: 29.6rem;
+        padding: 3.2rem;
+        box-sizing: border-box;
+        border: 1px solid $mediumGray;
+        &:hover{
+            background-color: $yellowBg;
         }
     }
-    &__subcribe {
-        @include button();
+    &-card--icon{
+        height: 48px;
+        width: 48px;
+        border-radius: 5px;
+        @include displayFlexCenter(center,center,0);
+        background-color: $lightYellow;
+    }
+    &-card--title{
+        margin-top: 1.6rem;
+        @include heading3();
+        color: $darkBg;
+        text-transform: capitalize;
+    }
+    &-card--discribe{
+        margin-top: .4rem;
+        @include body1();
+        color: $mediumGray;
     }
 }
+.blogpage__join{
+    margin-bottom: 12.8rem;
+    width: 100%;
+    @include displayFlexCenter(center,center,0);
+    &-box{
+        width: 41.4rem;
+        @include displayFlexcolumn();
+    }
+    &--title{
+        @include heading2();
+        color: $darkBg;
+        text-align: center;
+    }
+    &--discribe{
+        margin-top: 1.6rem;
+        @include body1();
+        text-align: center;
+        color: $mediumGray;
+    }
+    &--btn{
+        margin-top: 3.2rem;
+        @include buttonJoin();
+    }
+}
+

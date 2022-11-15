@@ -1,0 +1,42 @@
+@mixin buttonSub($color: $yellowBg){
+    box-sizing: border-box;
+    @include fontSen();
+    font-weight: 700;
+    font-size: 1.8rem;
+    width: 17.9rem; height: 5.6rem;
+    line-height: 2.4rem;
+    color: $darkBg; 
+    background-color: $color;
+    cursor: pointer;
+    &:hover{
+        opacity: 0.7;
+    }
+}
+@mixin buttonRead($color: $yellowBg){
+    box-sizing: border-box;
+    @include fontSen();
+    font-weight: 700;
+    font-size: 1.8rem;
+    width: 20.4rem; height: 5.6rem;
+    line-height: 2.4rem;
+    color: $darkBg; 
+    background-color: $color;
+    cursor: pointer;
+    &:hover{
+        opacity: 0.9;
+    }
+}
+@mixin buttonJoin($color: $yellowBg){
+    box-sizing: border-box;
+    @include fontSen();
+    font-weight: 700;
+    font-size: 1.8rem;
+    width: 17.4rem; height: 5.6rem;
+    line-height: 2.4rem;
+    color: $darkBg; 
+    background-color: $color;
+    cursor: pointer;
+    &:hover{
+        opacity: 0.9;
+    }
+}
