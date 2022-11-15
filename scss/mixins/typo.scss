@@ -1,0 +1,121 @@
+@font-face {
+    font-family: "SenBold";
+    src:   url("/public/fonts/Sen-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "SenRegular";
+    src: url("/public/fonts/Sen-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Inter";
+    src: url("/public/fonts/Inter-Regular.ttf") format("truetype"); 
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@mixin fontSen{
+    font-family: "Sen",sans-serif;
+}
+
+@mixin fontInter {
+    font-family: "Inter",sans-serif;
+}
+@mixin heading1{
+    @include fontSen();
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 64px;
+    letter-spacing: -2px;
+    text-align: left;
+}
+
+@mixin heading2{
+    @include fontSen();
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -2px;
+    text-align: left;
+}
+
+@mixin heading3{
+    @include fontSen();
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -1px;
+    text-align: left;
+}
+
+@mixin heading4{
+    @include fontSen();
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+
+}
+
+@mixin heading5{ 
+    @include fontSen();
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+@mixin heading6{
+    @include fontSen();
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+@mixin body1{
+    @include fontInter();
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+@mixin body2{
+    @include fontInter();
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+@mixin cap1{
+    @include fontInter();
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 3px;
+    text-align: left;
+}
+@mixin cap3{
+    @include fontInter();
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 3px;
+    text-align: left;
+}
+@mixin lable1{
+   @include fontInter();
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+}

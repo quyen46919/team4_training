@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "SenBold";
+  src: url("/public/fonts/Sen-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SenRegular";
+  src: url("/public/fonts/Sen-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/public/fonts/Inter-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.header {
+  position: sticky;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  padding: 1.2rem 8rem 1.2rem 8.2rem;
+  background-color: #232536;
+}
+.header__logo {
+  font-size: 24px;
+  font-weight: 700px;
+  color: #ffffff;
+}
+.header__subcribe {
+  box-sizing: border-box;
+  font-family: "Sen", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  width: 17.9rem;
+  height: 5.6rem;
+  line-height: 2.4rem;
+  color: #232536;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.header__subcribe:hover {
+  opacity: 0.7;
+}
+.header__links {
+  flex-grow: 1;
+  display: flex;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 3.2rem;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.header__links a {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+  color: #ffffff;
+}
+.header__links a:hover {
+  opacity: 0.7;
+}
+
+/*# sourceMappingURL=header.css.map */
