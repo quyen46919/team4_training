@@ -4,13 +4,117 @@
     align-items: $align;
     gap: $gap;
 }
-
-@mixin button($color: $white) {
+//  button
+@mixin buttonSmall($color: $white) {
     padding: 16px 48px;
     background-color: $color;
+    font-family: "Sen";
     border: none;
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
     cursor: pointer;
+}
+@mixin buttonBig($color: $white) {
+    padding: 16px 48px;
+    background-color: $color;
+    font-family: "Sen";
+    border: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+    cursor: pointer;
+}
+@mixin inputType($pad: 14px 24px) {
+    padding: $pad;
+    border: none;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+//  Text
+@mixin heading1($mb: 24px) {
+    font-family: "Sen";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: -2px;
+    margin-bottom: $mb;
+}
+@mixin heading2($mb: 32px) {
+    font-family: "Sen";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    padding-bottom: $mb;
+}
+@mixin heading3($mb: 16px) {
+    font-family: "Sen";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    padding-bottom: $mb;
+}
+@mixin heading4($mb: 0px) {
+    font-family: "Sen";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    padding-bottom: $mb;
+}
+@mixin Label1($mb: 0px) {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    padding-bottom: $mb;
+}
+@mixin Cap1($mb: 0px) {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: $mb;
+}
+
+@mixin body1($mb: 24px) {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: $mb;
+}
+
+@mixin body2($mb: 24px) {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: $mb;
+}
+
+@mixin title($mb: 24px) {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 3px;
+    margin-bottom: $mb;
+}
+
+@mixin display() {
+    font-family: "Sen";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: -2px;
 }
