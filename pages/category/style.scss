@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sen:wght@400;700&display=swap");
+
+@import "../../scss/mixins/typo.scss";
+@import "../../scss/mixins/display.scss";
+@import "../../scss/mixins/button.scss";
+@import "../../scss/variables/general.scss";
+@import "../../scss/components/container.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.category {
+    .header {
+        background-color: $darkBg;
+        @include displayFlexCenter($justi: space-between, $gap: 32px);
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 80px;
+        padding: 0 80px;
+        &__menu {
+            flex-grow: 1;
+            @include displayFlexCenter($justi: flex-end, $gap: 24px);
+        }
+        &__link {
+            text-decoration: none;
+            @include body1($color: $white);
+        }
+        &__btn {
+            @include button;
+        }
+    }
+    &__top {
+        background-color: $lavender;
+        width: 100%;
+        &--heading {
+            @include headingBig;
+            margin-top: 80px;
+        }
+        &--text {
+            @include body1;
+            padding-top: 16px;
+            padding-bottom: 32px;
+        }
+        &--breadcrumb {
+            @include cap;
+        }
+    }
+    &__top-content {
+        margin: 0 auto;
+        padding: 80px 0;
+        text-align: center;
+        max-width: 515px;
+    }
+    &__main {
+        @include displayFlexCenter(
+            $justi: space-between,
+            $gap: 144px,
+            $align: flex-start
+        );
+        padding: 128px 80px;
+    }
+
+    &__main-left {
+        flex-grow: 1;
+    }
+
+    &__main-right {
+        width: 298px;
+        &--heading {
+            @include heading2;
+        }
+    }
+
+    &__main-item {
+        @include displayFlexCenter($justi: space-between, $gap: 144px);
+        display: flex;
+        gap: 32px;
+        &:not(:last-child) {
+            padding-bottom: 32px;
+        }
+    }
+    &__main-content {
+        &--cap {
+            @include cap($color: $purple);
+        }
+        &--heading {
+            @include heading2;
+        }
+        &--text {
+            @include body1;
+        }
+    }
+    &__card {
+        padding-bottom: 48px;
+        width: 298px;
+    }
+    &__card-list {
+        padding-top: 40px;
+    }
+    &__items {
+        @include displayFlexCenter($justi: flex-start, $gap: 16px);
+        @include heading3;
+        padding: 24px;
+        border: 1.5px solid #c1c1c3;
+        width: 100%;
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+        transition: 0.3s;
+        &:hover {
+            background-color: $yellowBg;
+            border-color: transparent;
+            cursor: pointer;
+        }
+    }
+
+    &__tag-list {
+        padding-top: 24px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__tag-btn {
+        padding: 8px 37px;
+        border-radius: 100px;
+        background-color: transparent;
+        border: 1.5px solid #c1c1c3;
+        @include textTag;
+        color: $mediumGray;
+        margin-bottom: 16px;
+    }
+    .footer {
+        background-color: $darkBg;
+        padding: 59px 80px 56px;
+        .header {
+            position: relative;
+            z-index: 0;
+            padding: 0;
+        }
+        &__form {
+            @include displayFlexCenter($justi: space-between);
+            &--text {
+                @include heading2($color: $white);
+                width: 50%;
+            }
+            background-color: rgba($color: $white, $alpha: 0.05);
+            padding: 80px 64px;
+            margin-top: 57px;
+        }
+        &__form-group {
+            width: 50%;
+            text-align: right;
+        }
+        &__form-btn {
+            @include button($color: $yellowBg);
+        }
+        &__form-input {
+            background-color: transparent;
+            border: 1px solid $darkGray;
+            outline: none;
+            padding: 14px 25px;
+            @include body1($color: $white);
+            margin-right: 24px;
+        }
+        &__bottom {
+            @include displayFlexCenter($justi: space-between);
+            padding-top: 48px;
+            p {
+                @include body1($color: $white);
+            }
+        }
+        &__bottom-icon {
+            a {
+                &:not(:last-child) {
+                    padding-right: 26.6px;
+                }
+            }
+        }
+    }
+}
