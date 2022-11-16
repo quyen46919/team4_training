@@ -1,0 +1,122 @@
+@mixin fontInter {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+@mixin fontSen {
+    font-family: "Sen", Arial, Helvetica, sans-serif;
+}
+
+@mixin headingBig($color: $darkBg) {
+    @include fontSen();
+    color: $color;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: -2px;
+}
+
+@mixin heading1($color: $darkBg) {
+    @include fontSen();
+    color: $color;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: -2px;
+}
+
+@mixin heading2($color: $darkBg) {
+    @include fontSen();
+    color: $color;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+}
+
+@mixin heading3($color: $darkBg) {
+    @include fontSen();
+    color: $color;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 64px;
+    letter-spacing: -2px;
+}
+
+@mixin heading4($color: $darkBg) {
+    @include fontSen();
+    color: $color;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 64px;
+    letter-spacing: -2px;
+}
+
+@mixin heading5($color: $darkBg) {
+    @include fontSen();
+    color: $color;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 64px;
+    letter-spacing: -2px;
+}
+
+@mixin heading6($color: $darkBg) {
+    @include fontSen();
+    color: $color;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 64px;
+    letter-spacing: -2px;
+}
+
+@mixin body1($color: $darkBg) {
+    @include fontInter();
+    color: $color;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+@mixin body2($color: $darkBg) {
+    @include fontInter();
+    color: $color;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+@mixin label($color: $darkBg) {
+    @include fontInter();
+    color: $color;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+@mixin cap($fontWeight: 500, $color: $darkBg) {
+    @include fontInter();
+    font-style: normal;
+    font-weight: $fontWeight;
+    color: $color;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+@mixin textTag() {
+    font-family: "Sen";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 32px;
+}
