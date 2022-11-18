@@ -1,0 +1,126 @@
+@mixin fontStyle(
+    $fontStyle: normal,
+    $fontWeight: 700,
+    $fontSize: 5.6rem,
+    $lineHeight: 6.4rem,
+    $letterSpacing: 0,
+    $textColor: $color
+) {
+    font-style: $fontStyle;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+    color: $textColor;
+}
+
+@mixin fontSen {
+    font-family: "Sen", Arial, Helvetica, sans-serif;
+}
+
+@mixin fontInter {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+@mixin headingDisplay($color: $darkBg) {
+    @include fontSen;
+    @include fontStyle($letterSpacing: -0.1rem, $textColor: $color);
+}
+
+@mixin heading1($color: $darkBg) {
+    @include fontSen;
+    @include fontStyle(
+        $fontSize: 4.8rem,
+        $letterSpacing: -0.2rem,
+        $textColor: $color
+    );
+}
+
+@mixin heading2($color: $darkBg) {
+    @include fontSen;
+    @include fontStyle(
+        $fontSize: 3.6rem,
+        $lineHeight: 4.8rem,
+        $letterSpacing: -0.2rem,
+        $textColor: $color
+    );
+}
+
+@mixin heading3($color: $darkBg) {
+    @include fontSen;
+    @include fontStyle(
+        $fontSize: 2.8rem,
+        $lineHeight: 4rem,
+        $letterSpacing: -0.1rem,
+        $textColor: $color
+    );
+}
+
+@mixin heading4($color: $darkBg) {
+    @include fontSen;
+    @include fontStyle(
+        $fontSize: 2.4rem,
+        $lineHeight: 3.2rem,
+        $textColor: $color
+    );
+}
+
+@mixin heading5($color: $darkBg) {
+    @include fontSen;
+    @include fontStyle(
+        $fontSize: 2rem,
+        $lineHeight: 3.2rem,
+        $textColor: $color
+    );
+}
+
+@mixin heading6($color: $darkBg) {
+    @include fontSen;
+    @include fontStyle(
+        $fontSize: 1.6rem,
+        $lineHeight: 2.4rem,
+        $textColor: $color
+    );
+}
+
+@mixin textBody1($color: $darkGray) {
+    @include fontInter;
+    @include fontStyle(
+        $fontWeight: 400,
+        $fontSize: 1.6rem,
+        $lineHeight: 2.8rem,
+        $textColor: $color
+    );
+}
+
+@mixin textBody2($color: $darkBg) {
+    @include fontInter;
+    @include fontStyle(
+        $fontWeight: 400,
+        $fontSize: 1.4rem,
+        $lineHeight: 2rem,
+        $textColor: $color
+    );
+}
+
+@mixin textLabel($color: $darkBg) {
+    @include fontInter;
+    @include fontStyle(
+        $fontWeight: 500,
+        $fontSize: 1.4rem,
+        $lineHeight: 2rem,
+        $textColor: $color
+    );
+}
+
+@mixin textCap($fontWeight: 600, $color: $darkBg) {
+    @include fontInter;
+    @include fontStyle(
+        $fontWeight: $fontWeight,
+        $fontSize: 1.6rem,
+        $lineHeight: 2rem,
+        $letterSpacing: 0.3rem,
+        $textColor: $color
+    );
+    text-transform: uppercase;
+}

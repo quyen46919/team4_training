@@ -1,0 +1,51 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+
+    @include responsive($desktop) {
+        font-size: 56.25%;
+    }
+
+    @include responsive($tablet) {
+        font-size: 50%;
+    }
+}
+
+body {
+    @include textBody1;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba($darkBg, 0.5);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba($mediumGray, 0.5);
+}
+
+::selection {
+    color: $white;
+    background: $yellow;
+}

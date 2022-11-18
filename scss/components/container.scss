@@ -1,0 +1,15 @@
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include responsive($container) {
+        padding-right: 32px !important;
+        padding-left: 32px !important;
+    }
+
+    @include responsive($mobile) {
+        padding-right: 16px !important;
+        padding-left: 16px !important;
+    }
+}
