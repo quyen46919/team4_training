@@ -1,7 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
+@import "./scss/font.scss";
+@import "./scss/base.scss";
+@import "./scss/screen.scss";
 
-@import "./scss/variable/index.scss";
-@import "./scss/mixins/general.scss";
+@import "./scss/variables/color.scss";
 
-@import "./scss/page/homepage.scss";
+@import "./scss/mixins/display.scss";
+@import "./scss/mixins/typo.scss";
+@import "./scss/mixins/button.scss";
+
+@import "./scss/components/header.scss";
+@import "./scss/components/footer.scss";
+@import "./scss/components/container.scss";
+
+@import "./pages/about/homepage.scss";

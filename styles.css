@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
 *,
 *::before,
 *::after {
@@ -42,39 +50,81 @@ h6 {
   overflow-wrap: break-word;
 }
 
-.homepage {
-  width: 100%;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-.homepage__header {
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+body {
+  line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  outline: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.header {
+  width: 100%;
   height: 80px;
-  background-color: #232536;
-  color: rgb(244, 240, 248);
   padding: 12px 80px 12px 83px;
+  z-index: 10;
+  position: fixed;
+  color: #fbf6ea;
+  background-color: #232536;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 32px;
 }
-.homepage__logo {
+.header__logo {
   width: 140px;
   height: 28.35px;
 }
-.homepage__logo img {
+.header__logo img {
   width: 100%;
   height: 100%;
 }
-.homepage__links {
+.header__links {
   flex-grow: 1;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 24px;
 }
-.homepage__links * {
-  color: rgb(244, 240, 248);
+.header__links * {
+  color: #fbf6ea;
   text-decoration: none;
 }
-.homepage__btnSubmit {
+.header__btnSubmit {
   padding: 16px 48px;
   background-color: #ffffff;
   font-family: "Sen";
@@ -84,16 +134,160 @@ h6 {
   line-height: 24px;
   cursor: pointer;
 }
-.homepage__homehero {
+
+.footer {
+  background-color: #232536;
+}
+.footer__headfoot {
+  height: 144px;
+  background-color: #232536;
+  color: #fbf6ea;
+  padding: 12px 80px 12px 83px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+.footer__logo {
+  width: 140px;
+  height: 28.35px;
+}
+.footer__links {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+}
+.footer__links * {
+  color: #fbf6ea;
+  text-decoration: none;
+}
+.footer__btnSubmit {
+  padding: 16px 48px;
+  background-color: #ffffff;
+  font-family: "Sen";
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  cursor: pointer;
+}
+.footer__CTAfoot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin: 0 80px;
+  background-color: #6d6e76;
+}
+.footer__sub {
+  font-family: "Sen";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  padding-bottom: 32px;
+  padding: 80px 0;
+  width: 50%;
+  color: #ffffff;
+}
+.footer__input {
+  padding: 14px 24px;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #6d6e76;
+  border: 1px #232536 solid;
+}
+.footer__input input {
+  border: none;
+  background-color: #6d6e76;
+  color: #ffffff;
+}
+.footer__subcribe {
+  padding: 16px 48px;
+  background-color: rgb(255, 208, 80);
+  font-family: "Sen";
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  cursor: pointer;
+}
+.footer__subcribe:hover {
+  background-color: rgb(237, 193, 74);
+}
+.footer__endfoot {
+  padding: 48px 80px 56px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  color: #fbf6ea;
+}
+.footer__address {
+  color: #ffffff;
+}
+.footer__mxh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+body {
+  min-width: 1440px;
+  height: auto;
+}
+
+.homepage {
+  width: 100%;
+}
+.homepage__post {
+  padding: 130px 78px 128px 80px;
+}
+.homepage__about-mison {
+  padding: 0px 80px;
+}
+.homepage__catagory {
+  padding: 128px 80px;
+}
+.homepage__special {
+  padding: 128px 80px;
+}
+.homepage__featured-in {
+  padding: 96px 109px 96px 94px;
+}
+.homepage__testimonials {
+  padding: 96px 80px 128px 80px;
+}
+.homepage__authors-list {
+  padding: 128px 80px 96px 80px;
+}
+.homepage__join {
+  padding: 128px 513px;
+}
+
+.home-hero__background {
   background-image: url(./image/312217600_1205560260303158_3666083953297109933_n.png);
   background-repeat: no-repeat;
   background-size: cover;
-  color: rgb(244, 240, 248);
+  color: #fbf6ea;
+  background-attachment: fixed;
+  padding-top: 80px;
+  background-color: rgb(76, 76, 76);
 }
-.homepage__heroinfo {
+.home-hero__layout {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+  width: 100%;
+  height: 720px;
+  position: absolute;
+}
+.home-hero__heroinfo {
   padding: 128px 556px 192px 80px;
 }
-.homepage__subtitles {
+.home-hero__subtitles {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
@@ -103,162 +297,10 @@ h6 {
   margin-bottom: 24px;
   text-transform: uppercase;
 }
-.homepage__subtitles span {
-  color: rgb(255, 255, 255);
+.home-hero__subtitles span {
+  color: #ffffff;
 }
-.homepage__headline {
-  font-family: "Sen";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 56px;
-  line-height: 64px;
-  letter-spacing: -2px;
-}
-.homepage__nameandday {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-  padding-bottom: 16px;
-}
-.homepage__nameandday span {
-  color: rgb(255, 208, 80);
-}
-.homepage__describe {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-  margin-bottom: 48px;
-}
-.homepage__readmore {
-  padding: 16px 48px;
-  background-color: rgb(255, 208, 80);
-  font-family: "Sen";
-  border: none;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-  cursor: pointer;
-}
-.homepage__readmore:hover {
-  background-color: rgb(237, 193, 74);
-}
-.homepage__post {
-  width: 100%;
-  padding: 130px 78px 128px 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 32px;
-}
-.homepage__featured {
-  width: 65%;
-}
-.homepage__textfea {
-  font-family: "Sen";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 48px;
-  padding-bottom: 32px;
-}
-.homepage__postwraper {
-  padding: 32px;
-  background-color: #ffffff;
-}
-.homepage__postwraper--lorem {
-  font-family: "Sen";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 28px;
-  padding-bottom: 16px;
-}
-.homepage__postwraper--describe {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-  margin-bottom: 32px;
-}
-.homepage__nameandday {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-  padding-bottom: 8px;
-}
-.homepage__nameandday span {
-  color: #592ea9;
-}
-.homepage__image {
-  width: 669px;
-  height: 352px;
-  padding-bottom: 32px;
-}
-.homepage__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.homepage__readmore {
-  padding: 16px 48px;
-  background-color: rgb(255, 208, 80);
-  font-family: "Sen";
-  border: none;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-  cursor: pointer;
-}
-.homepage__readmore:hover {
-  background-color: rgb(237, 193, 74);
-}
-.homepage__allposts {
-  width: 35%;
-  position: relative;
-}
-.homepage__view {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.homepage__item {
-  width: 517px;
-  height: 181px;
-  padding: 32px 116px 25px 32px;
-}
-.homepage__item:hover {
-  background-color: rgb(251, 246, 234);
-}
-.homepage__figma {
-  font-family: "Sen";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
-  padding-bottom: 0px;
-}
-.homepage__special {
-  padding: 128px 80px;
-}
-.homepage__specialchild {
-  position: relative;
-}
-.homepage__content {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 70%;
-  height: 85%;
-  padding: 80px;
-  background-color: #ffffff;
-}
-.homepage__headline {
+.home-hero__headline {
   font-family: "Sen";
   font-style: normal;
   font-weight: 700;
@@ -267,7 +309,68 @@ h6 {
   letter-spacing: -2px;
   margin-bottom: 24px;
 }
-.homepage__describe {
+.home-hero__nameandday {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  padding-bottom: 16px;
+}
+.home-hero__nameandday span {
+  color: rgb(255, 208, 80);
+}
+.home-hero__describe {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 48px;
+}
+.home-hero__readmore {
+  padding: 16px 48px;
+  background-color: rgb(255, 208, 80);
+  font-family: "Sen";
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  cursor: pointer;
+}
+.home-hero__readmore:hover {
+  background-color: rgb(237, 193, 74);
+}
+
+.post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+.post__featured {
+  width: 55%;
+}
+.post__textfea {
+  font-family: "Sen";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  padding-bottom: 32px;
+}
+.post__postwraper {
+  padding: 32px;
+  background-color: #ffffff;
+}
+.post__postwraper--lorem {
+  font-family: "Sen";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  padding-bottom: 16px;
+}
+.post__postwraper--describe {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -275,20 +378,66 @@ h6 {
   line-height: 28px;
   margin-bottom: 32px;
 }
-.homepage__readmore {
+.post__nameandday {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
   padding-bottom: 16px;
+}
+.post__nameandday span {
+  color: #592ea9;
+}
+.post__image {
+  width: 669px;
+  height: 352px;
+  padding-bottom: 32px;
+}
+.post__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.post__readmore {
   padding: 16px 48px;
   background-color: rgb(255, 208, 80);
   font-family: "Sen";
   border: none;
-  font-style: normal;
-  font-weight: 700;
   font-size: 18px;
-  line-height: 32px;
+  font-weight: 700;
+  line-height: 24px;
   cursor: pointer;
 }
-.homepage__readmore:hover {
+.post__readmore:hover {
   background-color: rgb(237, 193, 74);
+}
+.post__allposts {
+  width: 45%;
+  margin-top: -45px;
+  position: relative;
+}
+.post__view {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+.post__item {
+  width: 100%;
+  height: 25%;
+  padding: 32px 116px 25px 32px;
+}
+.post__item:hover {
+  background-color: #fbf6ea;
+}
+.post__figma {
+  font-family: "Sen";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  padding-bottom: 0px;
 }
 
 .shape {
@@ -296,32 +445,29 @@ h6 {
   flex-grow: 1;
   justify-content: flex-end;
 }
-.shape__shape1 {
+.shape__shape-left {
   width: 60%;
   height: 23px;
   background-color: rgb(255, 208, 80);
 }
-.shape__shape2 {
+.shape__shape-right {
   width: 20%;
   height: 23px;
   background-color: #592ea9;
 }
 
-.aboutmison {
-  padding: 0px 80px;
-}
-.aboutmison__design {
+.about-mison__design {
   height: 500px;
   display: flex;
   padding: 96px 108px 96px 80px;
-  background-color: rgb(244, 240, 248);
+  background-color: #fbf6ea;
   gap: 60px;
 }
-.aboutmison__aboutus {
+.about-mison__aboutus {
   width: 50%;
   height: 100%;
 }
-.aboutmison__aboutus--textabout {
+.about-mison__aboutus--textabout {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
@@ -329,7 +475,7 @@ h6 {
   line-height: 20px;
   padding-bottom: 24px;
 }
-.aboutmison__aboutus--title {
+.about-mison__aboutus--title {
   font-family: "Sen";
   font-style: normal;
   font-weight: 700;
@@ -337,7 +483,7 @@ h6 {
   line-height: 48px;
   padding-bottom: 16px;
 }
-.aboutmison__aboutus--lorem {
+.about-mison__aboutus--lorem {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -345,7 +491,7 @@ h6 {
   line-height: 28px;
   margin-bottom: 16px;
 }
-.aboutmison__aboutus--readmore {
+.about-mison__aboutus--readmore {
   padding: 16px 48px;
   background-color: transparent;
   font-family: "Sen";
@@ -356,11 +502,11 @@ h6 {
   cursor: pointer;
   padding: 16px 0;
 }
-.aboutmison__ourmision {
+.about-mison__ourmision {
   width: 50%;
   height: 100%;
 }
-.aboutmison__ourmision--textabout {
+.about-mison__ourmision--textabout {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
@@ -368,7 +514,7 @@ h6 {
   line-height: 20px;
   padding-bottom: 24px;
 }
-.aboutmison__ourmision--title {
+.about-mison__ourmision--title {
   font-family: "Sen";
   font-style: normal;
   font-weight: 700;
@@ -376,7 +522,7 @@ h6 {
   line-height: 48px;
   padding-bottom: 16px;
 }
-.aboutmison__ourmision--lorem {
+.about-mison__ourmision--lorem {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -385,9 +531,6 @@ h6 {
   margin-bottom: 16px;
 }
 
-.catagory {
-  padding: 128px 80px;
-}
 .catagory__cateories {
   display: flex;
   justify-content: center;
@@ -405,6 +548,7 @@ h6 {
 }
 .catagory__item {
   padding: 32px;
+  width: 24%;
   border: #6d6e76 1px solid;
 }
 .catagory__item img {
@@ -423,13 +567,56 @@ h6 {
   background-color: rgb(255, 208, 80);
 }
 .catagory__item:hover img {
-  background-color: rgb(251, 246, 234);
+  background-color: #fbf6ea;
 }
 
-.authors {
-  padding: 128px 80px 96px 80px;
+.special__specialchild {
+  position: relative;
 }
-.authors__listauthor {
+.special__content {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  height: 85%;
+  padding: 80px;
+  z-index: 1;
+  background-color: #ffffff;
+}
+.special__headline {
+  font-family: "Sen";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+}
+.special__describe {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 32px;
+}
+.special__readmore {
+  padding-bottom: 16px;
+  padding: 16px 48px;
+  background-color: rgb(255, 208, 80);
+  font-family: "Sen";
+  border: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  cursor: pointer;
+}
+.special__readmore:hover {
+  background-color: rgb(237, 193, 74);
+}
+
+.authors__author-info {
   padding-bottom: 32px;
 }
 .authors__textfea {
@@ -454,7 +641,7 @@ h6 {
   width: 25%;
 }
 .authors__item:hover {
-  background-color: rgb(251, 246, 234);
+  background-color: #fbf6ea;
 }
 .authors__img {
   padding-left: 25%;
@@ -485,13 +672,11 @@ h6 {
   gap: 16px;
 }
 
-.component {
-  padding: 96px 109px 96px 94px;
-}
-.component__logo {
+.featured-in__logo {
+  display: flex;
   justify-content: space-between;
 }
-.component__futurein--text {
+.featured-in__futurein--text {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -499,7 +684,7 @@ h6 {
   line-height: 20px;
   margin-bottom: 0px;
 }
-.component__futurein--head {
+.featured-in__futurein--head {
   font-family: "Sen";
   font-style: normal;
   font-weight: 700;
@@ -507,16 +692,8 @@ h6 {
   line-height: 32px;
   padding-bottom: 0px;
 }
-.component__logo {
-  display: flex;
-  gap: 85px;
-}
-
-.testimonials {
-  padding: 96px 80px 128px 80px;
-}
 .testimonials__child {
-  background-color: rgb(251, 246, 234);
+  background-color: #fbf6ea;
   display: flex;
   padding: 80px 111px 74px 112px;
 }
@@ -604,7 +781,6 @@ h6 {
 }
 
 .jointeam {
-  padding: 128px 513px;
   text-align: center;
 }
 .jointeam__headline {
@@ -635,142 +811,6 @@ h6 {
 }
 .jointeam__joinnow:hover {
   background-color: rgb(237, 193, 74);
-}
-
-.footer {
-  background-color: #232536;
-}
-.footer__headfoot {
-  height: 144px;
-  background-color: #232536;
-  color: rgb(244, 240, 248);
-  padding: 12px 80px 12px 83px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 32px;
-}
-.footer__logo {
-  width: 140px;
-  height: 28.35px;
-}
-.footer__logo img {
-  width: 100%;
-  height: 100%;
-}
-.footer__links {
-  flex-grow: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 24px;
-}
-.footer__links * {
-  color: rgb(244, 240, 248);
-  text-decoration: none;
-}
-.footer__btnSubmit {
-  padding: 16px 48px;
-  background-color: #ffffff;
-  font-family: "Sen";
-  border: none;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-  cursor: pointer;
-}
-.footer__CTAfoot {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-  margin: 0 80px;
-  background-color: #6d6e76;
-}
-.footer__sub {
-  font-family: "Sen";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 48px;
-  padding-bottom: 32px;
-  padding: 80px 0;
-  width: 50%;
-  color: rgb(255, 255, 255);
-}
-.footer__input {
-  padding: 14px 24px;
-  border: none;
-  box-sizing: border-box;
-  cursor: pointer;
-  background-color: #6d6e76;
-  border: 1px #232536 solid;
-}
-.footer__input input {
-  border: none;
-  background-color: #6d6e76;
-  color: rgb(255, 255, 255);
-}
-.footer__subcribe {
-  padding: 16px 48px;
-  background-color: rgb(255, 208, 80);
-  font-family: "Sen";
-  border: none;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-  cursor: pointer;
-}
-.footer__subcribe:hover {
-  background-color: rgb(237, 193, 74);
-}
-.footer__endfoot {
-  padding: 48px 80px 56px 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0;
-  color: rgb(251, 246, 234);
-}
-.footer__address {
-  color: rgb(255, 255, 255);
-}
-.footer__mxh {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-}
-
-@media screen and (max-width: 1024px) {
-  body {
-    padding-right: 0;
-    font-size: 0.6rem;
-  }
-  .homepage__image {
-    width: 100%;
-  }
-  .homepage__allposts {
-    padding-left: 20px;
-    margin-top: -50px;
-  }
-  .aboutmison__aboutus--title,
-  .aboutmison__ourmision--title {
-    font-size: 20px;
-  }
-  .authors__img {
-    width: 70%;
-    height: 70%;
-  }
-  .testimonials__profile--info {
-    padding: 0;
-  }
-  .testimonials__btn {
-    margin: 0;
-  }
-  .homepage__headline {
-    font-size: 37px;
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,63 @@
+.footer {
+    background-color: $darkBg;
+    &__headfoot {
+        height: 144px;
+        background-color: $darkBg;
+        color: $lightYellow;
+        padding: 12px 80px 12px 83px;
+        @include displayFlexCenter(center, space-between, 32px);
+    }
+    &__logo {
+        width: 140px;
+        height: 28.35px;
+    }
+    &__links {
+        flex-grow: 1;
+        @include displayFlexCenter(center, flex-end, 24px);
+        * {
+            color: $lightYellow;
+            text-decoration: none;
+        }
+    }
+    &__btnSubmit {
+        @include buttonSmall;
+    }
+    &__CTAfoot {
+        @include displayFlexCenter(center, center, 24px);
+        margin: 0 80px;
+        background-color: $mediumGray;
+    }
+    &__sub {
+        @include heading2;
+        padding: 80px 0;
+        width: 50%;
+        color: $light;
+    }
+    &__input {
+        @include inputType;
+        background-color: $mediumGray;
+        border: 1px $darkBg solid;
+        input {
+            border: none;
+            background-color: $mediumGray;
+            color: $light;
+        }
+    }
+    &__subcribe {
+        @include buttonSmall($yellowBg);
+    }
+    &__subcribe:hover {
+        background-color: $yellow;
+    }
+    &__endfoot {
+        padding: 48px 80px 56px 80px;
+        @include displayFlexCenter(center, space-between);
+        color: $lightYellow;
+    }
+    &__address {
+        color: $light;
+    }
+    &__mxh {
+        @include displayFlexCenter(center, center, 24px);
+    }
+}

@@ -1,0 +1,28 @@
+@import "../font.scss";
+@mixin buttonSmall($color: $light) {
+    padding: 16px 48px;
+    background-color: $color;
+    font-family: "Sen";
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    cursor: pointer;
+}
+@mixin buttonBig($color: $light) {
+    padding: 16px 48px;
+    background-color: $color;
+    font-family: "Sen";
+    border: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+    cursor: pointer;
+}
+@mixin inputType($pad: 14px 24px) {
+    padding: $pad;
+    border: none;
+    box-sizing: border-box;
+    cursor: pointer;
+}

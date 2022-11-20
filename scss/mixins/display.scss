@@ -1,0 +1,12 @@
+@mixin displayFlexCenter($align: center, $justi: center, $gap: 0) {
+    display: flex;
+    justify-content: $justi;
+    align-items: $align;
+    gap: $gap;
+}
+@mixin position($posi: absolute, $top: 0, $right: 0) {
+    position: $posi;
+    top: $top;
+    right: $right;
+    z-index: 1;
+}

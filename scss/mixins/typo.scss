@@ -1,38 +1,5 @@
-@mixin displayFlexCenter($align: center, $justi: center, $gap: 0) {
-    display: flex;
-    justify-content: $justi;
-    align-items: $align;
-    gap: $gap;
-}
-//  button
-@mixin buttonSmall($color: $white) {
-    padding: 16px 48px;
-    background-color: $color;
-    font-family: "Sen";
-    border: none;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 24px;
-    cursor: pointer;
-}
-@mixin buttonBig($color: $white) {
-    padding: 16px 48px;
-    background-color: $color;
-    font-family: "Sen";
-    border: none;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 32px;
-    cursor: pointer;
-}
-@mixin inputType($pad: 14px 24px) {
-    padding: $pad;
-    border: none;
-    box-sizing: border-box;
-    cursor: pointer;
-}
-//  Text
+@import "../font.scss";
+
 @mixin heading1($mb: 24px) {
     font-family: "Sen";
     font-style: normal;
@@ -108,13 +75,4 @@
     line-height: 20px;
     letter-spacing: 3px;
     margin-bottom: $mb;
-}
-
-@mixin display() {
-    font-family: "Sen";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 64px;
-    letter-spacing: -2px;
 }
