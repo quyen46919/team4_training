@@ -1,0 +1,32 @@
+@mixin displayFlex($align: center, $justi: center, $gap: 0px) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justi;
+    gap: $gap;
+}
+
+@mixin displayFlexCol($align: center, $justi: center, $gap: 0px) {
+    display: flex;
+    flex-direction: column;
+    align-items: $align;
+    justify-content: $justi;
+    gap: $gap;
+}
+
+@mixin position($position: absolute, $top: 0, $right: 0, $bottom:0, $left: 0, $zIndex: 0) {
+    position: $position;
+    top: $top,;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    z-index: $zIndex;
+}
+
+@mixin padding($padding: 0) {
+    padding: $padding;
+    box-sizing: border-box;
+}
+
+@mixin margin($margin: 0px) {
+    margin: $margin
+}

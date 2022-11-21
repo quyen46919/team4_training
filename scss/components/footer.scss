@@ -1,0 +1,55 @@
+@import "../mixins/typo.scss";
+@import "../mixins/display.scss";
+@import "../variables/colors.scss";
+
+// footer
+
+@mixin footer {
+    background-color: $Black;
+    width: 100%;
+    height: 560px;
+    @include padding(33px 80px 56px 80px);
+}
+
+.footer{
+    .header{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    @include footer();
+    &__ContentFooter{
+        @include margin(31px 0px 0px 0px);
+        @include padding(80px 64px);
+        @include displayFlex();
+        background-color: $MediumBlack;
+        height: 256px;
+
+        &--title{
+           @include HeadingH2($Light);
+        }
+        &--input{
+            background-color: $MediumBlack;
+            border: 1px solid $DarkGrey;
+            width: 323px;
+            height: 56px;
+            @include margin(0px 24px 0px 64px);
+            @include padding(14px 25px);
+            color: $Light
+        }
+        &--btnSub{
+            @include button($Yellow, $Black);
+
+        }
+    }
+    &__media{
+        @include margin(48px 0px 0px 0px);
+        @include displayFlex(center, space-between, 0px);
+        &--left{
+            @include Body1($lighterGray);
+
+        }
+        &--right{
+            @include displayFlex(center, center, 26.67px);
+        }
+    }
+}

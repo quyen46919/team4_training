@@ -1,0 +1,163 @@
+// npm i -g sass
+//  sass tên file scss.scss tên file css.css --watch
+// vô ổ C xóa... => chạy lại => ctrl v ( compiled .. là oki)
+
+// css.reset
+// @import "./scss/mixins/display.scss";
+
+@import "./scss/mixins/typo.scss";
+@import "./scss/mixins/display.scss";
+@import "./scss/variables/base.scss";
+@import "./scss/variables/colors.scss";
+@import "./scss/components/buttom.scss";
+@import "./scss/components/header.scss";
+@import "./scss/components/footer.scss";
+@import "./scss/components/container.scss";
+
+.BlogPost{
+    // background-color: $darkYellow;
+    width: 100%;
+    height: auto;
+    //  Status
+    &__Status{
+        @include padding(128px 336px 64px 336px);
+    }
+    &__Users{
+        @include displayFlex(none, none, 16px);
+    }
+    &__UsersAvatar{
+        width: 48px;
+        height: 48px;
+    }
+    &__UsersInfor{
+        &--UserName{
+            @include HeadingH3();
+            color: $Purple;
+        }
+        &--PostTime{
+            @include Body1();
+        }
+    }
+    &__BlogText{
+        @include HeadingH1;
+        @include margin(24px 0px 34px 0px);
+    }
+    &__Startup{
+        @include displayFlex(none, none, 8px);
+        &--BlogIcon{
+           width: 24px;
+           height: 24px;
+        }
+        &--Icontext{
+            @include HeadingH4();
+        }
+    }
+    // BlogPostImg
+    &__BPostImg{
+        @include padding(0 80px);
+        width: 100%;
+        // height: 582px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    // Content
+    &__TextContent{
+        @include padding(64px 298px 80px 299px);
+    }
+    &__items{
+        @include margin(0px 0px 48px 0px);
+
+        &--Headline{
+            margin-bottom: 16px;
+            @include HeadingH2();
+        }
+        &--itemsText{
+            @include Body1();
+        }
+        &--itemsText1,
+        &--itemsText2{
+            @include Body1();
+            @include margin(24px 0px 0px 0px)
+        }
+        
+    }
+    &__lists{
+        @include margin(24px 0px);
+        @include displayFlex(center, flex-start, 12px);
+    }  
+    &__pointers{
+        @include displayFlexCol(flex-start, flex-start, 28px);
+        &--pointer{
+            width: 5px;
+            height: 5px;
+            border-radius: 10px;
+            background-color: $DarkGrey;
+        }
+    }  
+    &__ElementTexts{
+        @include HeadingH4($dark);
+    }
+
+    // What to read next
+    &__readNext{
+        @include padding(0px 80px 63px 80px);
+        @include displayFlexCol(flex-start, flex-start, 64px);
+        border-bottom: 1px solid $lightgray;
+    }
+    &__ReadNext-Title{
+        @include HeadingH2($darkBlack);
+    }
+    &__ReadNext-lists{
+        @include displayFlex(flex-start, flex-start, 32px);
+    }
+    &__ReadNext-card{
+        img{
+            width: 100%;
+            @include margin(0px 0px 32px 0px);
+        }
+        &--Location{
+            @include Label01($DarkGrey);
+            span{
+                color: $Purple;
+            }
+        }
+        &--TextTitle{
+            @include HeadingH3($Black);
+            @include margin(16px 0px);
+
+        }
+        &--Text{
+            @include Body1($darkGray);
+        }
+    }
+    
+    // Join team
+    &__JoinTeam{
+        @include padding(128px 521px 128px 505px);
+        text-align: center;
+        &--headline{
+            @include HeadingH2();
+        }
+        &--text{
+            @include Body1();
+            @include margin(16px 0px 32px 0px);
+        }
+        &--btnJoinNow{
+            width: 174px;
+            height: 56px;
+            @include button($Yellow, $Black);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Sen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+@mixin fontSen {
+    font-family: 'Sen',"Times New Roman", Times, serif;
+}
+@mixin fontInter {
+    font-family: 'Inter',"Times New Roman", Times, serif;
+}
+
+@mixin TitleIntro {
+    @include fontSen();
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: -2px;
+    color: $Light;
+    // padding-top: 24px;
+    // padding-bottom: 24px;
+}
+
+@mixin HeadingH1() {
+    @include fontSen();
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: -2px;
+    color: $Black;
+}
+
+@mixin HeadingH2($color: $Black) {
+    @include fontSen();
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -2px;
+    color: $color;
+}
+
+@mixin HeadingH3($color: $Black) {
+    @include fontSen();
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -1px;
+    color: $color;
+}
+
+@mixin HeadingH4($color: $Black) {
+    @include fontSen();
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: $color; 
+}
+
+@mixin HeadingH5 {
+    @include fontSen();
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    color: $Black;
+}
+
+@mixin HeadingH6 {
+    @include fontSen();
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: $Black;
+}
+@mixin Label01($color: $Black ) {
+    @include fontInter();
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: $color;
+}
+@mixin Body1 ($color: $Mediumgrey){
+    @include fontInter();
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: $color;
+}
+
+@mixin Body2 ($color: $Mediumgrey){
+    @include fontInter();
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: $color;
+}
+
+@mixin Cap1($color: $Black, $font-weight: 600) {
+    @include fontInter();
+    font-style: normal;
+    font-weight: $font-weight;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: $color;
+}
+
+
+
+

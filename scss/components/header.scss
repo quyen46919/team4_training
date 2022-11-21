@@ -1,0 +1,32 @@
+@import "../mixins/typo.scss";
+@import "../mixins/display.scss";
+@import "../variables/colors.scss";
+
+
+@mixin header($padding: 12px 80px 12px 83px) {
+    width: 100%;
+    height: 80px;
+    background-color: $Black;
+    display: flex;
+    padding: $padding;
+}
+
+.header{
+    @include header();
+    @include displayFlex(center,space-between,32px);
+    &__logo{
+        @include HeadingH2();
+        color: $Light;
+        }
+    &__links{
+        flex-grow: 1;
+        @include displayFlex(center, flex-end, 24px);
+        *{
+            @include Body1($Light);
+        }
+    }
+    &__btnSubscribe{
+        @include button();
+    }
+
+}
