@@ -1,0 +1,22 @@
+
+@mixin button($background-color: $Light, $color: $Black) {
+    color: $color;
+    padding: 16px 48px;
+    background-color: $background-color;
+    @include fontSen();
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    
+    &:hover {
+        @if $background-color == $Light {
+            background-color: darken($background-color, 10);
+        } @else {
+            background-color: $darkYellow;
+        }
+    }
+
+}
